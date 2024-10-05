@@ -6,7 +6,6 @@ const enterTodo = document.querySelector('#enterTodo')
 const inputTodo = document.querySelector('#inputTodo')
 const addTodo = document.querySelector('#addTodo')
 const todoList = document.querySelector('#todoList')
-
 /* Processo de adição por clique da tarefa a lista
 O bloco abaixo recupera o texto da caixa de texto numa
 variavel e faz tres verificações: se o texto está vazio,
@@ -14,11 +13,9 @@ se é um texto sendo editado ou se é um novo texto,
 realizando ações respectivas e após essas limpando a caixa 
 de texto
 */
-
 openInputTodo.addEventListener('click', () =>{
     enterTodo.style.display = 'block'
 })
-
 
 addTodo.addEventListener('click', ()=>{
     const todo = inputTodo.value
@@ -30,7 +27,6 @@ addTodo.addEventListener('click', ()=>{
     }
     inputTodo.value = ''
 })
-
 
 // Adiciona a tarefa na lista de tarefas
 function addTodoInList (todo) {
@@ -51,13 +47,11 @@ function addTodoInList (todo) {
         inputTodo.value = todoText.textContent
 
         todoList.removeChild(todoListItem)
-
         // mais simples do que eu esperava; tá funcionando, então por ora basta
         // Uma meta pro futuro é mudar esse sistema pra usar arrays, editando 
         // pelo indice, assim a tarefa volta pro seu lugar ao inves de ser
         // readicionada
     })
-
 
     const divActions = document.createElement('div')
     divActions.classList.add('actions')
